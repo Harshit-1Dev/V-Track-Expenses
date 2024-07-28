@@ -11,7 +11,7 @@ def create_user_route():
     response = create_user(data)
     #print (response)
     #response = [json.dumps(item, default=json_util.default) for item in response]
-    print (response)
+    #print (response)
     #return jsonify(response)
     return json.loads(json_util.dumps(response))
 
