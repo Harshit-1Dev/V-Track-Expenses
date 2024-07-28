@@ -32,7 +32,8 @@ class ExpenseTests(unittest.TestCase):
             ],
             "split_method": "equal"
         })
-        response = self.client.get('/expenses/user/user1')
+        response = self.client.get('/expenses/user/test@example.com')
+        print(response)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.get_json()), 1)
 
